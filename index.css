@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: "Smythe", sans-serif;
+    
+    
+    
+} 
+
+.image-container {
+    
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    
+   
+}
+
+.image-container img {
+    display: block;
+    width: 600px;
+    height: 167px;
+    object-fit: cover;
+    object-position: 20% 80%;
+    
+    
+
+    
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    right: 60%;
+    transform: translate(0%, -50%);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    align-items: flex-start;
+    align-content: center;
+    gap: 10px;
+    /* border: 1px solid red; */
+    
+    
+}
+
+.emoji {
+    padding: 0px;
+    /* border: 1px solid blue; */
+    font-size: 70px;
+    display: inline-block;
+    position: relative;
+    bottom: 60px
+    
+}
+
+.food-details {
+    display: block;
+    /* border: 1px solid green; */
+      
+    
+}
+
+.ingredients {
+    color: #8B8B8B;
+    font-size: 13px;
+}
+
+.add-btn img {
+    
+    
+    
+}
+
+.your-order-section {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
