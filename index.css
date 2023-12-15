@@ -1,8 +1,9 @@
 body {
-    margin: 0;
+    margin: auto;
     font-family: "Smythe", sans-serif;
-    
-    
+    max-width: 600px;
+    height: auto;
+    display: block;
     
 } 
 
@@ -40,27 +41,25 @@ body {
 
 .menu {
     display: flex;
+    justify-content: space-between;
     align-items: flex-start;
     align-content: center;
     gap: 10px;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     
     
 }
 
 .emoji {
-    padding: 0px;
     /* border: 1px solid blue; */
     font-size: 70px;
-    display: inline-block;
-    position: relative;
-    bottom: 60px
-    
 }
 
 .food-details {
     display: block;
     /* border: 1px solid green; */
+    position: relative;
+    right: 170px;
       
     
 }
@@ -71,9 +70,7 @@ body {
 }
 
 .add-btn img {
-    
-    
-    
+    margin: auto;  
 }
 
 .your-order-section {
@@ -81,5 +78,27 @@ body {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
+}
+
+.modal {
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 0.4rem;
+width: 450px;
+padding: 1.3rem;
+min-height: 250px;
+position: absolute;
+top: 20%;
+background-color: white;
+border: 1px solid #ddd;
+border-radius: 15px;
+background-color: beige;
+}
+
+.the-note{
+    font-size: 20px;
+    color: green;
 }

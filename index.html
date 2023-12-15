@@ -33,11 +33,28 @@
                     <p class="order total-price">$<span id="total-price">26</span></p>
                 </div>
                 <div>
-                    <button class="order-button">Complete order</button>
+                    <button class="complete-order-button">Complete order</button>
                 </div>
                 
             </section>
-        </main>   
+        </main>
+        <section>
+            <div class="modal hidden">
+                <form id="consent-form">
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your name" required/>
+                    <input type="text" id= "cardNumber" name="cardNumber" placeholder="Enter card number" required/>
+                    <input type="text" id= "cvv" name="cvv" placeholder="Enter CVV" required/>
+                    <button class="pay-button">Pay</button>
+                </form>    
+            </div>
+        </section>
+        <section>
+            <div class="thank-you-note hidden">
+                <p class ="the-note">
+                    <!-- insert thank you note here with the customers name -->
+                </p>
+            </div>
+        </section>
 	<script src="index.js" type="module"></script>
     </body>
 </html>
