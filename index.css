@@ -233,6 +233,11 @@ z-index: 2;
     font-size: 20px;   
 }
 
+.thank-you-note {
+    display: flex;
+    justify-content: center;
+}
+
 .the-note{
     font-size: 32px;
     color: #065F46;
