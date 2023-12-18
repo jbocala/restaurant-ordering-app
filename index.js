@@ -5,7 +5,9 @@ const orderList = document.querySelector(".order-list")
 const completeOrderBtn = document.querySelector(".complete-order-button")
 const modal = document.querySelector(".modal")
 const consentForm = document.querySelector("#consent-form")
+const closeBtn = document.querySelector(".close-btn")
 const payBtn = document.querySelector(".pay-button")
+const overlay = document.querySelector(".overlay")
 const thankYouNote = document.querySelector(".thank-you-note")
 let orderedItemList = []
 
@@ -22,7 +24,7 @@ const getHtmlMenu = menuArray.map(function(food){
                     <div class="food-details">
                         <p class="name">${food.name}</p>
                         <p class="ingredients">${food.ingredients}</p>
-                        <p class="price">${food.price}</p> 
+                        <p class="price">$${food.price}</p> 
                     </div>
                     <div>
                         <button 
@@ -57,6 +59,7 @@ function addToOrder(itemId){
     orderedItemList.push(orderedItemObject)
 
     createOrder()
+    thankYouNote.classList.add("hidden")
 }
 
 
@@ -66,8 +69,11 @@ function createOrder(){
     orderedItemList.forEach(function(order, index){
         orderHtml += `
         <li class="order-item">
-            <p class="item-name">${order.name}</p>
-            <button class="remove-btn" data-remove="${index}">remove</button>
+            <p class="item-name">${order.name} 
+                <button class="remove-btn" data-remove="${index}">
+                    remove
+                </button>
+            </p>
             <p class="item-price">$${order.price}</p>
         </li>
         `
@@ -90,11 +96,17 @@ function removeItem(index){
     // This function will render the consent form to promt customer details 
     const renderConsentForm = function(){
         modal.classList.remove("hidden")
+        overlay.classList.remove("hidden")
+    }
+
+// Close button function in modal
+    function closeModalBtn(){
+        modal.classList.add("hidden")
+        overlay.classList.add("hidden")
     }
 
 
-
-// Pay button function 
+// Pay button function in modal
 
 function paySubmitted(){
     let fullName = document.querySelector("#fullName")
@@ -107,9 +119,10 @@ function paySubmitted(){
         modal.classList.add("hidden")
         yourOrder.classList.add("hidden")   
         thankYouNote.classList.remove("hidden")
+        overlay.classList.add("hidden")
 
         document.querySelector(".the-note").innerText = `
-        Thank you ${fullName.value}! Your order is on the way!
+        Thanks, ${fullName.value}! Your order is on its way!
         `
     }
 }
@@ -137,3 +150,9 @@ consentForm.addEventListener('submit', function(e){
     e.preventDefault()
     paySubmitted()  
 })
+
+closeBtn.addEventListener('click', function(){
+    closeModalBtn() 
+})
+
+

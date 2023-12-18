@@ -1,11 +1,26 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+    
+}
+
 body {
     margin: auto;
     font-family: "Smythe", sans-serif;
-    max-width: 600px;
-    height: auto;
-    display: block;
+    
     
 } 
+
+.container {
+    max-width: 600px;
+    margin: 0px auto 30px auto;
+    
+    
+}
 
 .image-container {
     
@@ -23,9 +38,6 @@ body {
     object-fit: cover;
     object-position: 20% 80%;
     
-    
-
-    
 }
 
 .overlay-text {
@@ -35,70 +47,212 @@ body {
     transform: translate(0%, -50%);
     color: #fff;
     padding: 10px 20px;
-    font-size: 10px;
+    font-size: 15px;
     text-align: center;
 }
 
 .menu {
+    margin: 10px 10px;
+    padding-bottom: 35px;
+    padding-top: 35px;
+    font-size: 18px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-content: center;
+    align-items: center;
     gap: 10px;
-    border: 1px solid red;
+    border-bottom: solid grey 1px;
     
     
 }
 
 .emoji {
-    /* border: 1px solid blue; */
     font-size: 70px;
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .food-details {
     display: block;
-    /* border: 1px solid green; */
-    position: relative;
-    right: 170px;
-      
-    
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto; 
+    width: 420px;     
 }
 
 .ingredients {
     color: #8B8B8B;
     font-size: 13px;
+    
 }
 
-.add-btn img {
-    margin: auto;  
+.add-button {
+    font-size: 15px;
+    font-family: Inter;
+    color: #3C3C3C;
+    border: 1px solid #dedede;
+    border-radius: 50px;
+    padding: 12px 16px;
+    background-color: transparent;
+    margin: auto;
 }
 
 .your-order-section {
+    padding: 10px;
     display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    
 }
+
+.your-order-section h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.complete-order-container button {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    font-family: Verdana;
+    color: #FFFFFF;
+    background-color: #16DB99;
+    border: none;
+    border-radius: 3px;    
+}
+
+.order-list {
+    list-style: none;
+    border-bottom: solid #393333 2px;
+}
+
+.order-item {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+   
+}
+
+
+.item-price {
+    margin-left: 430px;
+}
+
+.remove-btn {
+    border: none;
+    background: none;
+    font-size: 12px;
+    text-decoration: underline;
+    color: #8B8B8B;
+}
+
+.total-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 15px; 
+    z-index: 2;
+}
+
 
 .hidden {
     display: none !important;
 }
 
 .modal {
-
 display: flex;
 flex-direction: column;
-justify-content: center;
-gap: 0.4rem;
-width: 450px;
-padding: 1.3rem;
-min-height: 250px;
+justify-content: flex-start;
+width: 524px;
+height: fit-content;
+padding: 0px;
 position: absolute;
 top: 20%;
-background-color: white;
 border: 1px solid #ddd;
 border-radius: 15px;
-background-color: beige;
+background-color: #FFFFFF;
+z-index: 2;
+
+
+}
+
+.modal-center {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.close-btn {
+    transform: translate(230px, -20px);
+    font-size: 15px;
+    font-family: Inter;
+    color: #3C3C3C;
+    border: 1px solid #dedede;
+    border-radius: 50px;
+    padding: 12px 16px;
+    background-color: transparent;
+    margin: auto;
+}
+
+.modal form {
+    margin: 30px auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal h2 {
+    display: flex;
+    justify-content: center;
+    margin-top:  0px;
+}
+
+.modal input {
+    width: 475px;
+    height: 70px;
+    padding: 15px;
+    margin: 15px;
+    font-size: 20px;
+}
+
+.pay-button {
+    border: none;
+    width: 475px;
+    height: 70px;
+    background-color: #16DB99;
+    color: #FFFFFF;
+    font-family: Verdana;
+    font-size: 20px;   
 }
 
 .the-note{
-    font-size: 20px;
-    color: green;
+    font-size: 32px;
+    color: #065F46;
+    background-color: #ECFDF5;
+    display: flex;
+    justify-content: center;
+    width: 504px;
+    height: 120px;
+    font-family: "Smythe", sans-serif;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 1;
 }

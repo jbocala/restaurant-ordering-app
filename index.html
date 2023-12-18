@@ -7,54 +7,80 @@
         <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">  
     </head>
     <body>
-        <header>
-            <div class="image-container">
-                <img src="images/burger.jpeg" alt="photo of two burgers">
-                <div class="overlay-text">
-                    <h1>Jimmy's Diner</h2>
-                    <h2>The best burgers and pizzas in town</h2>
-                </div>
-            </div> 
-        </header>
-        
-        <main>
-            <div class="menu-section" id="menu-section">
-                
-                <!-- Diner's menu here -->
-                
-            </div>
+        <div class="container">
+            <header>
+                <div class="image-container">
+                    <img src="images/burger.png" alt="photo of two burgers">
+                    <div class="overlay-text">
+                        <h1>Jimmy's Diner</h2>
+                        <h2>The best burgers and pizzas in town</h2>
+                    </div>
+                </div> 
+            </header>
             
-            <section class="your-order-section hidden">
-                    <h2>Your Order</h2>
-                    <ul class="order-list">    
-                    </ul>
-                <div class="total-price">
-                    <p>Total Price: </p>
-                    <p class="order total-price">$<span id="total-price">26</span></p>
-                </div>
-                <div>
-                    <button class="complete-order-button">Complete order</button>
+            <main>
+                <div class="menu-section" id="menu-section">
+                    
+                    <!-- Diner's menu here -->
+                    
                 </div>
                 
+                <section class="your-order-section hidden">
+                        <h2>Your Order</h2>
+                        <ul class="order-list">    
+                        </ul>
+                    <div class="total-price">
+                        <p>Total Price: </p>
+                        <p class="order total-price">$<span id="total-price">26</span></p>
+                    </div>
+                    <div class="complete-order-container">
+                        <button class="complete-order-button">Complete order</button>
+                    </div>
+                    
+                </section>
+            </main>
+            <section class="modal-center">
+                <div class="modal hidden">
+                    <form id="consent-form">
+                        <button class="close-btn">X</button>
+                        <h2>Enter card details</h2>
+                        
+                        <div> 
+                            <input type="text" 
+                            id="fullName" 
+                            name="fullName" 
+                            placeholder="Enter your name" 
+                            required/>
+                        </div>
+                        <div>
+                            <input type="text" 
+                            id= "cardNumber" 
+                            name="cardNumber" 
+                            placeholder="Enter card number" 
+                            pattern="[0-9]{16}" 
+                            required/>
+                        </div>
+                        <div>
+                            <input type="text" 
+                            id= "cvv" 
+                            name="cvv" 
+                            placeholder="Enter CVV" 
+                            pattern="[0-9]{3}" 
+                            required/>
+                        </div>
+                        <button class="pay-button">Pay</button>
+                    </form>    
+                </div>
             </section>
-        </main>
-        <section>
-            <div class="modal hidden">
-                <form id="consent-form">
-                    <input type="text" id="fullName" name="fullName" placeholder="Enter your name" required/>
-                    <input type="text" id= "cardNumber" name="cardNumber" placeholder="Enter card number" required/>
-                    <input type="text" id= "cvv" name="cvv" placeholder="Enter CVV" required/>
-                    <button class="pay-button">Pay</button>
-                </form>    
-            </div>
-        </section>
-        <section>
-            <div class="thank-you-note hidden">
-                <p class ="the-note">
-                    <!-- insert thank you note here with the customers name -->
-                </p>
-            </div>
-        </section>
+            <section>
+                <div class="thank-you-note hidden">
+                    <p class ="the-note">
+                        <!-- insert thank you note here with the customers name -->
+                    </p>
+                </div>
+            </section>
+            <div class="overlay hidden"></div>
+        </div>
 	<script src="index.js" type="module"></script>
     </body>
 </html>
